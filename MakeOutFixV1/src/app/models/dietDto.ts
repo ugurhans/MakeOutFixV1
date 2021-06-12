@@ -1,4 +1,4 @@
 export class DietDto {
-  id: number;
-  name: string;
+  id!: number;
+  name!: string;
 }
