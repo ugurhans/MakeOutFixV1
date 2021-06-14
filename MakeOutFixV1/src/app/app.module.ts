@@ -10,6 +10,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { PatientDetailsComponent } from './components/patient-details/patient-details.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { PatinetListComponent } from './components/patinet-list/patinet-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PatientDetailsComponent } from './components/patient-details/patient-de
     LoginComponent,
     RegisterComponent,
     UserListComponent,
-    PatientDetailsComponent
+    PatientDetailsComponent,
+    ProfileComponent,
+    PatinetListComponent
   ],
   imports: [
     BrowserModule,

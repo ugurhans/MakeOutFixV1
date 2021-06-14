@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Patient } from 'src/app/models/patient';
 import { PatientService } from 'src/app/services/patient.service';
@@ -13,10 +14,17 @@ export class PatientDetailsComponent implements OnInit {
   constructor(
     private patientSerive:PatientService,
     private toastrService:ToastrService,
+    private activatedRoute:ActivatedRoute
 
   ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe((params) => {
+      if (params['carId']) {
+       
+        this.getPatientDtoById(params['carId']);
+      }
+    });
   }
 
   getPatientById(userId:number){
@@ -30,4 +38,6 @@ export class PatientDetailsComponent implements OnInit {
       this.patient = response.data;
     });
   }
+
+  
 }
