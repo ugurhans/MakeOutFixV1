@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
       this.authService.login(loginModel).subscribe((response) => {
         if (response.success) {
           this.localStorageService.set('token', response.data.token);
-          this.localStorageService.set('email', loginModel.name);
+          this.localStorageService.set('email', loginModel.email);
           this.toastrService.info(response.message);
           this.router.navigate(['/homepage']);
           this.getUser(loginModel.email);

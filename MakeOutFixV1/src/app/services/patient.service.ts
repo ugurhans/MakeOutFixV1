@@ -13,7 +13,7 @@ import { SingleResponseModel } from '../models/singleResponseModel';
 export class PatientService {
   
   
-  apiUrl = 'https://localhost:5001/api/';
+  apiUrl = 'https://localhost:44380/api/';
 
   constructor(
     private httpClient: HttpClient

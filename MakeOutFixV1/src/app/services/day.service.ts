@@ -16,7 +16,7 @@ export class DayService {
     private httpClient: HttpClient,
   ) { }
 
-  apiUrl = 'https://localhost:5001/api/'; //Api url değişkendir !
+  apiUrl = 'https://localhost:44380/api/'; //Api url değişkendir !
   
 
   getDays(): Observable<ListResponseModel<Days>> {

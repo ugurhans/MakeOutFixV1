@@ -20,13 +20,26 @@ export class DietAdddComponent implements OnInit {
   createDietForm() {
     this.dietAddForm = this.formBuilder.group({
       name:["",Validators.required],
+      dietMethodId:["",Validators.required],
+      weekDay:["",Validators.required],
+      breakfast:["",Validators.required],
+      firstSnack:["",Validators.required],
+      launch:["",Validators.required],
+      secondSnack:["",Validators.required],
+      dinner:["",Validators.required],
+      lastSnack:["",Validators.required],
+      dailyTotal:["",Validators.required],
+      recommended:["",Validators.required],
+      
     }) 
   }
 
   addDiet(){
     if (this.dietAddForm.valid) {
       let dietModel = Object.assign({},this.dietAddForm.value);
-      console.log(dietModel);
+      this.dietService.add(dietModel).subscribe(response=>{
+        
+      })
     }
   }
 

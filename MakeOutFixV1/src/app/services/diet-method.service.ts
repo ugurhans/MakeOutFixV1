@@ -11,7 +11,7 @@ import { SingleResponseModel } from '../models/singleResponseModel';
   providedIn: 'root'
 })
 export class DietMethodService {
-  apiUrl = 'https://localhost:5001/api/';
+  apiUrl = 'https://localhost:44380/api/';
   constructor(  
     private httpClient: HttpClient,
     ) { }

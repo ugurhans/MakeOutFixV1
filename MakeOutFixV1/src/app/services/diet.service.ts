@@ -8,16 +8,12 @@ import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DietService {
-  
-  apiUrl = 'https://localhost:5001/api/';
+  apiUrl = 'https://localhost:44380/api/';
 
-  constructor(
-
-    private httpClient: HttpClient,
-  ) { }
+  constructor(private httpClient: HttpClient) {}
 
   getDiets(): Observable<ListResponseModel<Diet>> {
     let newPath = this.apiUrl + 'diets/getall';
@@ -34,7 +30,7 @@ export class DietService {
     return this.httpClient.get<ListResponseModel<DietDto>>(newPath);
   }
 
-  getDietByUserId(){
+  getDietByUserId() {
     let newPath = this.apiUrl + 'Diets/getDietByUserId';
     return this.httpClient.get<ListResponseModel<DietDto>>(newPath);
   }
@@ -59,6 +55,4 @@ export class DietService {
       diet
     );
   }
-
-
 }
