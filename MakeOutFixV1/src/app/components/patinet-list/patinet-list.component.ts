@@ -7,32 +7,30 @@ import { PatientService } from 'src/app/services/patient.service';
 @Component({
   selector: 'app-patinet-list',
   templateUrl: './patinet-list.component.html',
-  styleUrls: ['./patinet-list.component.scss']
+  styleUrls: ['./patinet-list.component.scss'],
 })
 export class PatinetListComponent implements OnInit {
-
-  patients: Patient [] = [];
-  patientsDto: PatientDto [] = [];
+  patients: Patient[] = [];
+  patientsDto: PatientDto[] = [];
 
   constructor(
     private toastrService: ToastrService,
-    private patientService:PatientService
-  ) { }
+    private patientService: PatientService
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  getAllPatients(){
-    this.patientService.getPatients().subscribe(response=>{
+  getAllPatients() {
+    this.patientService.getPatients().subscribe((response) => {
       this.patients = response.data;
-      this.toastrService.success("Hastalar Başarıyla Listelendi");
-    })
+      this.toastrService.success('Hastalar Başarıyla Listelendi');
+    });
   }
 
-  getAllPatientsDto(){
-    this.patientService.getPatientsDto().subscribe(response=>{
+  getAllPatientsDto() {
+    this.patientService.getPatientsDto().subscribe((response) => {
       this.patientsDto = response.data;
-      this.toastrService.success("Hastalar Başarıyla Listelendi");
-    })
+      this.toastrService.success('Hastalar Başarıyla Listelendi');
+    });
   }
 }

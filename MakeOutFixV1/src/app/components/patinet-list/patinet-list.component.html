@@ -1,1 +1,18 @@
-<p>patinet-list works!</p>
+<div class=" bg">
+    <table class="table table-hover table-striped">
+        <thead class="thead-inverse text-center">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Patient Name</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let patient of patients" class="table text-center">
+                <td>{{ patient.id }}</td>
+                <td>{{ patient.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
