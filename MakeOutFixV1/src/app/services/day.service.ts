@@ -74,11 +74,4 @@ export class DayService {
       days
     );
   }
-
-  verifyDays(days: Days) {
-    return this.httpClient.post<ResponseModel>(
-      this.apiUrl + 'days/verifyDay',
-      days
-    );
-  }
 }
