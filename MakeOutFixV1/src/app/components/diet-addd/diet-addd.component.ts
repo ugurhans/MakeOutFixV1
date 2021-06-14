@@ -21,16 +21,19 @@ export class DietAdddComponent implements OnInit {
     this.dietAddForm = this.formBuilder.group({
       name:["",Validators.required],
       dietMethodId:["",Validators.required],
-      weekDay:["",Validators.required],
-      breakfast:["",Validators.required],
-      firstSnack:["",Validators.required],
-      launch:["",Validators.required],
-      secondSnack:["",Validators.required],
-      dinner:["",Validators.required],
-      lastSnack:["",Validators.required],
-      dailyTotal:["",Validators.required],
-      recommended:["",Validators.required],
-      
+      days:[
+        {
+        weekDay:["",Validators.required],
+        breakfast:["",Validators.required],
+        firstSnack:["",Validators.required],
+        launch:["",Validators.required],
+        secondSnack:["",Validators.required],
+        dinner:["",Validators.required],
+        lastSnack:["",Validators.required],
+        dailyTotal:["",Validators.required],
+        recommended:["",Validators.required],      
+      }
+    ]
     }) 
   }
 
@@ -42,6 +45,5 @@ export class DietAdddComponent implements OnInit {
       })
     }
   }
-
-
+ 
 }

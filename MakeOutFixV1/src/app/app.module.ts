@@ -14,6 +14,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { DietAdddComponent } from './components/diet-addd/diet-addd.component';
+import { DietMethodComponent } from './components/diet-method/diet-method.component';
+import { AddDietMethodComponent } from './components/add-diet-method/add-diet-method.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { DietAdddComponent } from './components/diet-addd/diet-addd.component';
     PatinetListComponent,
     HomepageComponent,
     DietAdddComponent,
+    DietMethodComponent,
+    AddDietMethodComponent,
   ],
 
   imports: [
