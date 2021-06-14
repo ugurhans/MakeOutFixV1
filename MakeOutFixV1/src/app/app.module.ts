@@ -12,6 +12,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { PatientDetailsComponent } from './components/patient-details/patient-details.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PatinetListComponent } from './components/patinet-list/patinet-list.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PatinetListComponent } from './components/patinet-list/patinet-list.com
     UserListComponent,
     PatientDetailsComponent,
     ProfileComponent,
-    PatinetListComponent
+    PatinetListComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
