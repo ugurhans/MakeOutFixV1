@@ -2,26 +2,45 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ToastrModule } from "ngx-toastr";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DietAddComponent } from './components/diet-add/diet-add.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { DietListComponent } from './components/diet-list/diet-list.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { LoginComponent } from './components/login/login.component';
+import { PatientDetailsComponent } from './components/patient-details/patient-details.component';
+import { PatinetListComponent } from './components/patinet-list/patinet-list.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { RegisterComponent } from './components/register/register.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { DietAdddComponent } from './components/diet-addd/diet-addd.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DietAddComponent,
     DashboardComponent,
-    DietListComponent
+    LoginComponent,
+    RegisterComponent,
+    UserListComponent,
+    PatientDetailsComponent,
+    ProfileComponent,
+    PatinetListComponent,
+    HomepageComponent,
+    DietAdddComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: "toast-bottom-right"
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

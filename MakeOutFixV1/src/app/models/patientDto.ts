@@ -1,5 +1,5 @@
 export class PatientDto {
-  id: number;
-  name: string;
-  illnessId: number;
+  id!: number;
+  name!: string;
+  illnessId!: number;
 }

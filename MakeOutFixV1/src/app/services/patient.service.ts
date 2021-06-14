@@ -12,6 +12,7 @@ import { SingleResponseModel } from '../models/singleResponseModel';
 })
 export class PatientService {
   
+  
   apiUrl = 'https://localhost:5001/api/';
 
   constructor(
@@ -27,6 +28,12 @@ export class PatientService {
     let newPath =
       this.apiUrl + 'patients/getpatientbyid?patientId=' + patientId;
     return this.httpClient.get<SingleResponseModel<Patient>>(newPath);
+  }
+
+  getPatientsDtoById(patientId: number) {
+    let newPath =
+    this.apiUrl + 'patients/getpatientbyid?patientId=' + patientId;
+  return this.httpClient.get<SingleResponseModel<Patient>>(newPath);
   }
 
   getPatientsDto(): Observable<ListResponseModel<PatientDto>> {
