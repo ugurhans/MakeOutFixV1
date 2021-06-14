@@ -50,11 +50,12 @@ export class LoginComponent implements OnInit {
 
       this.authService.login(loginModel).subscribe((response) => {
         if (response.success) {
+          this.getUser(loginModel.email);
           this.localStorageService.set('token', response.data.token);
           this.localStorageService.set('email', loginModel.email);
           this.toastrService.info(response.message);
           this.router.navigate(['/homepage']);
-          this.getUser(loginModel.email);
+          
         }
       });
     }
@@ -63,13 +64,11 @@ export class LoginComponent implements OnInit {
   getUser(email: string) {
     this.userService.getByEmail(email).subscribe((response) => {
       this.user = response.data;
-
-      this.localStorageService.set('email', this.user.email);
       this.localStorageService.set(
         'name',
         this.user.name + ' ' + this.user.lastName
       );
-      this.localStorageService.set('id', this.user.id.toString());
+
     });
   }
 }

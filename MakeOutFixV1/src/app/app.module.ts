@@ -16,6 +16,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { DietAdddComponent } from './components/diet-addd/diet-addd.component';
 import { DietMethodComponent } from './components/diet-method/diet-method.component';
 import { AddDietMethodComponent } from './components/add-diet-method/add-diet-method.component';
+import { UserAuthorizationComponent } from './components/user-authorization/user-authorization.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { AddDietMethodComponent } from './components/add-diet-method/add-diet-me
     DietAdddComponent,
     DietMethodComponent,
     AddDietMethodComponent,
+    UserAuthorizationComponent,
+    NavbarComponent
   ],
 
   imports: [

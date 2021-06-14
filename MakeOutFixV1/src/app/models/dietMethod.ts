@@ -1,4 +1,4 @@
 export class dietMethod {
-  Id: number;
-  Name: string;
+  Id!: number;
+  Name!: string;
 }

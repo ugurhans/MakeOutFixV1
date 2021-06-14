@@ -1,1 +1,23 @@
-<p>add-diet-method works!</p>
+<div class="content bg pt-5">
+    <div class="card mx-auto col-md-3">
+      <div class="card-header">
+        <h5 class="title">Add Diet</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="dietMethodAddForm">
+          <div class="form-group p-2">
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              class="form-control"
+              placeholder="Name"
+            />
+          </div>
+        </form>
+    </div>
+    <div class="card-footer">
+      <button (click)="addDietMethod()" class="btn btn-fill btn-primary">Save</button>
+    </div>
+  </div>
+</div>
