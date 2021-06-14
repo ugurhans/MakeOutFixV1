@@ -6,12 +6,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DietAddComponent } from './components/diet-add/diet-add.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DietAddComponent
-  ],
+  declarations: [AppComponent, DietAddComponent, HomepageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,6 +18,6 @@ import { DietAddComponent } from './components/diet-add/diet-add.component';
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
