@@ -1,0 +1,17 @@
+<div class="container">
+  <table class="table table-hover table-striped">
+    <thead class="thead-inverse text-center">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Diet Name</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let diet of diets" class="table text-center">
+        <td>{{ diet.id }}</td>
+        <td>{{ diet.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
