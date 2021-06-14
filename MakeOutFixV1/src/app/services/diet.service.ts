@@ -34,23 +34,8 @@ export class DietService {
     return this.httpClient.get<ListResponseModel<DietDto>>(newPath);
   }
 
-  getDietsUnVerified(): Observable<ListResponseModel<Diet>> {
-    let newPath = this.apiUrl + 'Diets/getallDietsunverified';
-    return this.httpClient.get<ListResponseModel<Diet>>(newPath);
-  }
-
-  getDietsDtoUnVerified(): Observable<ListResponseModel<DietDto>> {
-    let newPath = this.apiUrl + 'Diets/getallDietdtounverified';
-    return this.httpClient.get<ListResponseModel<DietDto>>(newPath);
-  }
-
-  getDietsVerified(): Observable<ListResponseModel<Diet>> {
-    let newPath = this.apiUrl + 'Diets/getallDietsverified';
-    return this.httpClient.get<ListResponseModel<Diet>>(newPath);
-  }
-
-  getDietsDtoVerified(): Observable<ListResponseModel<DietDto>> {
-    let newPath = this.apiUrl + 'Diets/getallDietdtoverified';
+  getDietByUserId(){
+    let newPath = this.apiUrl + 'Diets/getDietByUserId';
     return this.httpClient.get<ListResponseModel<DietDto>>(newPath);
   }
 
@@ -75,10 +60,5 @@ export class DietService {
     );
   }
 
-  verifyDiet(diet: Diet) {
-    return this.httpClient.post<ResponseModel>(
-      this.apiUrl + 'Diets/verifyDiet',
-      diet
-    );
-  }
+
 }
