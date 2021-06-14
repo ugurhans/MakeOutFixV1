@@ -20,8 +20,8 @@ export class PatientDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
-      if (params['carId']) {
-        this.getPatientDtoById(params['carId']);
+      if (params['id']) {
+        this.getPatientDtoById(params['id']);
       }
     });
   }

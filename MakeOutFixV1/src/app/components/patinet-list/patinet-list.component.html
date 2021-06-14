@@ -12,6 +12,7 @@
             <tr *ngFor="let patient of patients" class="table text-center">
                 <td>{{ patient.id }}</td>
                 <td>{{ patient.name }}</td>
+                <button routerLink="/patients/{{patient.id}}"> </button>
             </tr>
         </tbody>
     </table>

@@ -11,7 +11,7 @@ import { DietService } from '../../services/diet.service';
 export class DietListComponent implements OnInit {
   constructor(private dietService: DietService) {}
 
-  diet: Diet[];
+  diet!: Diet[];
   dietDto: DietDto[] = [];
 
   ngOnInit(): void {
