@@ -1,1 +1,35 @@
-<p>diet-detail works!</p>
+<div class="bg">
+  <table class="table table-hover table-striped">
+    <thead class="thead-inverse text-center">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Weed Day</th>
+        <th scope="col">Breakfast</th>
+        <th scope="col">First Snake</th>
+        <th scope="col">Launch</th>
+        <th scope="col">Second Snack</th>
+        <th scope="col">Dinner</th>
+        <th scope="col">Last Snack</th>
+        <th scope="col">Daily Total</th>
+        <th scope="col">Recommended</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table text-center" *ngFor="let day of days">
+        <td>{{ diet.id }}</td>
+        <td>{{ diet.name }}</td>
+        <td>{{ day.weekDay }}</td>
+        <td>{{ day.breakfast }}</td>
+        <td>{{ day.firstSnack }}</td>
+        <td>{{ day.launch }}</td>
+        <td>{{ day.secondSnack }}</td>
+        <td>{{ day.dinner }}</td>
+        <td>{{ day.lastSnack }}</td>
+        <td>{{ day.dailyTotal }}</td>
+        <td>{{ day.recommended }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

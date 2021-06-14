@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
         'name',
         this.user.name + ' ' + this.user.lastName
       );
-
+      this.localStorageService.set('id',this.user.id.toString());
     });
   }
 }

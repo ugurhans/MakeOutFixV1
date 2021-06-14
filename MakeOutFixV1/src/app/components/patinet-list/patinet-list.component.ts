@@ -18,7 +18,9 @@ export class PatinetListComponent implements OnInit {
     private patientService: PatientService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAllPatients();
+  }
 
   getAllPatients() {
     this.patientService.getPatients().subscribe((response) => {

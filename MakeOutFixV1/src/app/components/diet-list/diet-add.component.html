@@ -1,0 +1,19 @@
+<div class=" bg">
+    <table class="table table-hover table-striped">
+        <thead class="thead-inverse text-center">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Patient Name</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let diet of diets" class="table text-center">
+                <td>{{ diet.id }}</td>
+                <td>{{ diet.name }}</td>
+                <button type="button"class="btn btn-outline-secondary" routerLink="/diet-details/{{diet.id}}">Detayları Gör </button>
+            </tr>
+        </tbody>
+    </table>
+</div>

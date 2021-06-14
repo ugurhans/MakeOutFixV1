@@ -15,7 +15,7 @@ import { UserOperationClaim } from '../models/userOperationClaims';
   providedIn: 'root'
 })
 export class UserService {
-  apiUrl = "https://localhost:44380/api/users";
+  apiUrl = "https://localhost:44380/api/Users";
   constructor(private httpClient: HttpClient) { }
 
 

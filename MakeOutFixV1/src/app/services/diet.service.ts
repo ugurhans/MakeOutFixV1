@@ -20,8 +20,8 @@ export class DietService {
     return this.httpClient.get<ListResponseModel<Diet>>(newPath);
   }
 
-  getDietsById(DietId: number): Observable<SingleResponseModel<Diet>> {
-    let newPath = this.apiUrl + 'Diets/getdietbyid?dietId=' + DietId;
+  getDietsById(dietId: number): Observable<SingleResponseModel<Diet>> {
+    let newPath = this.apiUrl + 'Diets/getbyid?dietId=' + dietId;
     return this.httpClient.get<SingleResponseModel<Diet>>(newPath);
   }
 

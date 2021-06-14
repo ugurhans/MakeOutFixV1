@@ -1,5 +1,5 @@
 .bg {
-  background-color: #bbdef0;
+  background-color: #fff;
   height: 100vh;
   width: 100vw;
 }
@@ -17,6 +17,7 @@ body {
   padding-top: 10px;
   padding-right: 50px;
   padding-bottom: 40px;
+  overflow: hidden;
 }
 
 .form-signin {
